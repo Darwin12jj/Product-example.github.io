@@ -1,0 +1,330 @@
+* {
+    font-family: system-ui;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.header__container_elements {
+    display: flex;
+    background: rgba(0, 0, 0, .85);
+    backdrop-filter: saturate(180%) blur(20px);
+    height: 100%;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0 9.5rem;
+    align-items: center;
+}
+
+.symbol {
+    font-size: 1.4rem;
+}
+
+.symbol:hover {
+    filter:drop-shadow(0 0 .1111rem #fff);
+}
+
+.header a {
+    color: rgb(142, 142, 142);
+    font-size: 15px;
+    transition: color .2s;
+}
+
+.header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main__big-title {
+    background: rgb(248, 249, 250);
+    height: 23.5rem;    
+    margin: .7rem .7rem 0 ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main__big_title_text {
+    align-self: center;
+    width:41.66666667%;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.main__text_title {
+    font-size: calc(1.175rem + 2.7vw);
+    margin-bottom: .5rem;
+}
+
+.main__big_title_button {
+    height: 1.8rem;
+    width: 6rem;
+    font-size: .8rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    color: rgb(108, 117, 125);
+    border: 1px solid rgb(108, 117, 125);
+    background: #fff;
+    transition: background .3s, color .6s;
+}
+
+.main__big_title_button:hover {
+    background: rgb(108, 117, 125);
+    color: rgb(248, 249, 250);
+}
+
+.main_big-title_cellphone {
+    display: flex;
+    width: 13rem;
+    height: 24rem;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+    position: absolute;
+    align-items: center;
+}
+
+.main__celphone_screen {
+    width: 12rem;
+    height: 20rem;
+    background: rgba(72, 72, 72);
+    border-radius: 5px;
+    margin: auto;
+    transition: box-shadow 1s, background .5s;
+}
+
+.position_cellphone {
+    left: 70%;
+    top: 25%;
+}
+
+.white_cellphone {
+    background-color: rgb(232,232,232);
+    bottom: 5rem;
+    left: 3rem;
+}
+
+.white_cellphone .main__celphone_screen {
+    background: rgb(232, 232, 232);
+}
+
+.main_big-title_cellphone:hover>.main__celphone_screen {
+    box-shadow: 0 0 10px #fff;
+    background: #fff;
+}
+
+.main__group_cards_headline {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.7rem 0 0 0.7rem;
+    justify-content: space-between;
+    align-content:stretch;
+}
+
+.main__card-container {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    flex: 35%;
+    background: rgb(248, 249, 250);
+    margin-right:0.7rem;
+    padding: 3rem 3rem 0 3rem;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.main_group-cards_text {
+    margin: 1rem 0 ;
+    color: rgba(33, 37, 41);
+    max-width: 22rem;
+    align-self: center;
+}
+
+.group_cards_title {
+    font-size:calc(1rem + 2.1vw);
+    font-weight: 300;
+}
+
+.main_group-cards_text p {
+    font-weight: 100;
+}
+
+.main__group_cards-phone {
+    height: 20rem;
+    width: 20rem;
+    min-width: 12rem;
+    background-color:rgb(248, 249, 250);
+    position: relative;
+    top: 1rem;
+    border-radius: 1rem;
+    align-self: center;
+    transition: box-shadow .3s;
+}
+
+.phone-hover:hover {
+    box-shadow:0 0 15px #fff
+}
+
+.black-box {
+    background: rgba(33, 37, 41);
+}
+
+.w-text {
+    color: rgb(248, 249, 250);
+}
+
+.b-phone {
+    background-color: rgba(33, 37, 41);
+}
+
+.bl-box {
+    background-color: rgb(13,110,253);
+}
+
+.f-w-phone {
+    background: rgba(255, 255, 255);
+}
+
+
+.footer__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__block-list {
+    margin: 2rem 3.5rem 2rem 0;
+}
+
+.footer__block-list i {
+    display: block;
+    font-size: 1.5rem;
+}
+
+.footer__ul {
+    list-style: none;
+}    
+
+
+.footer__ul a{
+    font-size: .8rem;
+    color: #6c757d;
+} 
+
+
+
+@media only screen and (max-width: 870px) {
+    .header__container_elements {
+        display: flex;
+        justify-content:center ;
+    }
+
+    .header__container_elements a{
+        display: none;
+    }
+
+    .header__container_elements a:first-child {
+        display: block;
+    }
+
+    .main__group_cards-phone {
+        width: 15rem;
+    }
+}
+
+@media only screen and (max-width: 706px) {
+    .main__group_cards-phone {
+        width: 12rem;
+    }
+
+    .footer__row {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (max-width: 540px) {
+    .main__big-title {
+        margin: 0;
+    }
+
+    .main__big_title_text {
+        width:auto;
+    }
+
+    .main_big-title_cellphone {
+        display: none;
+    }
+
+    .main__group_cards_headline {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .main__group_cards-phone {
+        width: 17.5rem;
+    }
+
+    .main__card-container {
+        margin: 0;
+        padding:0 .5rem;
+    }
+
+    .footer__row {
+        justify-content: start;
+    }
+
+    .footer__block-list {
+        margin: .5rem;
+    }
+}
+
+
+
+@media only screen and (max-width: 390px) {
+    .main__big-title {
+        height: 16.5rem;
+    }
+
+    .main__big_title_text {
+        padding: .3rem;
+    }
+
+    .header__container_elements {
+        padding: 0%;
+    }
+
+    .main__group_cards-phone {
+        width: 7rem;
+    }
+
+    .main__card-container {
+        padding:0 .1rem;
+    }
+
+}
